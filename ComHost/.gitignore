@@ -1,0 +1,5 @@
+*.user
+*.sln
+Debug
+Release
+.vs

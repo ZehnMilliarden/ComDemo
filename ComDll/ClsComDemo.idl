@@ -1,0 +1,55 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(eabd8132-1ac2-4cf2-99aa-e94d1189ea2b),
+	dual,
+	oleautomation
+]
+interface InfComDemo : IDispatch
+{
+	[id(1)] HRESULT Method1();
+	[id(2)] HRESULT Method2();
+};
+
+[
+	object,
+	uuid(13fb16b2-25ff-4c83-a7fa-375107e00267),
+	dual,
+	oleautomation
+]
+interface InfComDemoEx : InfComDemo
+{
+	[id(3)] HRESULT Method3();
+	[id(4)] HRESULT Method4([in] VARIANT szText);
+};
+
+[
+	uuid(72df6eb5-0675-42b7-a193-935811f55074),
+	version(1.0)
+]
+library ClsComDemoLib
+{
+	importlib("stdole2.tlb");
+
+	[
+		uuid(2312b16a-7166-4838-8628-a914d96bef9a)
+	]
+	coclass ClsComDemo
+	{
+		interface InfComDemo;
+		[default] interface InfComDemoEx;
+	};
+
+	[
+		uuid(0bc65693-f9d3-450d-8794-732e964cadf8)
+	]
+	coclass ClsComAggDemo
+	{
+		interface InfComDemo;
+		[default] interface InfComDemoEx;
+	};
+};
+
+import "shobjidl.idl";

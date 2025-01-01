@@ -1,0 +1,35 @@
+HKCR
+{
+    Demo.ClsComDemo.1 = s 'ClsComDemo'
+    {
+        CLSID = s '{2312b16a-7166-4838-8628-a914d96bef9a}'
+    }
+    Demo.ClsComDemo = s 'ClsComDemo'
+    {
+        CLSID = s '{2312b16a-7166-4838-8628-a914d96bef9a}'
+        CurVer = s 'Demo.ClsComDemo.1'
+    }
+
+    NoRemove CLSID
+    {
+        ForceRemove {2312b16a-7166-4838-8628-a914d96bef9a} = s 'ClsComDemo Class'
+        {
+            val AppID = s '%APPID%'
+            ProgID = s 'Demo.ClsComDemo.1'
+            VersionIndependentProgID = s 'Demo.ClsComDemo'
+            InprocServer32 = s '%MODULE%'
+            {
+                val ThreadingModel = s 'Both'
+            }
+            TypeLib = s '{72df6eb5-0675-42b7-a193-935811f55074}'
+        }
+    }
+    NoRemove AppID
+    {
+        ForceRemove %APPID% = s 'ClsComDemoApplication'
+        {
+            val AppID = s '%APPID%'
+            val DllSurrogate = s ''
+        }
+    }
+}
