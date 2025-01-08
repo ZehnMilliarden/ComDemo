@@ -1,0 +1,6 @@
+*.user
+*.sln
+Debug
+Release
+.vs
+*.TMP
