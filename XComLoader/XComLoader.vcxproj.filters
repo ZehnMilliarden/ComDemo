@@ -16,8 +16,8 @@
     <Filter Include="import">
       <UniqueIdentifier>{8f5ca0dc-e3bf-4483-9255-75ace49da8aa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="import\xcom">
-      <UniqueIdentifier>{c27cfc41-6268-446a-ab7c-7978eb7293c4}</UniqueIdentifier>
+    <Filter Include="import\XCom">
+      <UniqueIdentifier>{92c0fc6f-fb99-46e1-90e0-a9bbd28a76b0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -26,14 +26,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="xcom\XComBase.h">
-      <Filter>import\xcom</Filter>
+    <ClInclude Include="..\XCom\XComBase.h">
+      <Filter>import\XCom</Filter>
     </ClInclude>
-    <ClInclude Include="xcom\XComCli.h">
-      <Filter>import\xcom</Filter>
+    <ClInclude Include="..\XCom\XComCli.h">
+      <Filter>import\XCom</Filter>
     </ClInclude>
-    <ClInclude Include="xcom\XComWinLoader.h">
-      <Filter>import\xcom</Filter>
+    <ClInclude Include="..\XCom\XComWinLoader.h">
+      <Filter>import\XCom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\XCom\XComError.h">
+      <Filter>import\XCom</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

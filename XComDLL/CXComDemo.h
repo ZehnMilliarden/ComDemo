@@ -23,11 +23,11 @@ public:
     XCOM_END_MAP()
 
 public:
-    virtual int __stdcall Test() { 
+    virtual int XCOMCALL Test() { 
         return 0; 
     }
 
-    virtual int __stdcall Test2() {
+    virtual int XCOMCALL Test2() {
         return 0;
     }
 };

@@ -1,4 +1,4 @@
 LIBRARY
 EXPORTS
-	XComDllGetClassObject   PRIVATE
-	XComDllCanUnloadNow		PRIVATE
+	XComGetClassObject   PRIVATE
+	XComCanUnloadNow	 PRIVATE

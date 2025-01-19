@@ -1,7 +1,7 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "pch.h"
 
-#include "xcom/XCom.h"
+#include "XCom/XCom.h"
 #include "CXComDemo.h"
 
 XComModule g_XComModule;
@@ -10,14 +10,14 @@ XCOM_BEGIN_OBJECT_MAP(ObjMap)
     XCOM_OBJECT_ENTRY(XComGUID_CXComDemo, CXComDemo)
 XCOM_END_OBJECT_MAP()
 
-int __stdcall XComDllCanUnloadNow()
+XCOMRESULT XCOMCALL XComCanUnloadNow()
 {
-    return g_XComModule.DllCanUnloadNow();
+    return g_XComModule.ModuleCanUnloadNow();
 }
 
-int __stdcall XComDllGetClassObject(const XComGUID& rclsid, const XComGUID& riid,  void** ppv)
+XCOMRESULT XCOMCALL XComGetClassObject(const XComGUID& rclsid, const XComGUID& riid,  void** ppv)
 {
-    return g_XComModule.DllGetClassObject(rclsid, riid, ppv);
+    return g_XComModule.ModuleGetClassObject(rclsid, riid, ppv);
 }
 
 BOOL APIENTRY DllMain( HMODULE hModule,

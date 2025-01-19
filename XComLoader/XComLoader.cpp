@@ -6,13 +6,13 @@
 #include <memory>
 
 #include "IXComDemo.h"
-#include "xcom/XComWinLoader.h"
+#include "xcom/XComLoader.h"
 
 int main()
 {
 
-    std::shared_ptr<XComWinLoader<IXComDemo, XComGUID_CXComDemo>> loader =
-        std::make_shared<XComWinLoader<IXComDemo, XComGUID_CXComDemo>>();
+    std::shared_ptr<XComLoader<IXComDemo, XComGUID_CXComDemo>> loader =
+        std::make_shared<XComLoader<IXComDemo, XComGUID_CXComDemo>>();
     loader->Load(L"XComDll.dll");
 
     XComPtr<IXComDemo> pInfComDemo;
