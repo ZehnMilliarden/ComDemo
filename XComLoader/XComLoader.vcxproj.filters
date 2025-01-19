@@ -32,9 +32,6 @@
     <ClInclude Include="..\XCom\XComCli.h">
       <Filter>import\XCom</Filter>
     </ClInclude>
-    <ClInclude Include="..\XCom\XComWinLoader.h">
-      <Filter>import\XCom</Filter>
-    </ClInclude>
     <ClInclude Include="..\XCom\XComError.h">
       <Filter>import\XCom</Filter>
     </ClInclude>

@@ -137,7 +137,6 @@
     <ClInclude Include="..\XCom\XComBase.h" />
     <ClInclude Include="..\XCom\XComCli.h" />
     <ClInclude Include="..\XCom\XComError.h" />
-    <ClInclude Include="..\XCom\XComWinLoader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
